@@ -50,7 +50,8 @@ public class BinaryBomberService<T> {
 	private DocReader docReader;
 
 	public List<DocumentList> findDocumentList() {
-		String path = System.getProperty("user.dir")+"\\files";
+		String path = System.getProperty("user.dir")+"/files";
+		log.debug("Directory :"+path);
 		List<DocumentList> list = ListDocumentHelper.displayDirectoryContents(new File(path));
 		return list;
 	}
@@ -63,8 +64,8 @@ public class BinaryBomberService<T> {
 	
 	 public DocContent getDocsContent(String fileName) {
 		 DocContent docContent = new DocContent();
-		 String path = System.getProperty("user.dir")+"\\files";
-		 docContent.setFileName(path+"\\"+fileName);
+		 String path = System.getProperty("user.dir")+"/files";
+		 docContent.setFileName(path+"/"+fileName);
 		 docContent.setDocContent(docReader.readDoc(docContent.getFileName()));
 		 return docContent;
 	} 
