@@ -13,7 +13,9 @@ public class ListDocumentHelper {
 	private final static Logger log = Logger.getLogger(ListDocumentHelper.class);
 	static List<DocumentList> dlList = new ArrayList<DocumentList>();
 	
-	public static List<DocumentList> displayDirectoryContents(File fileDir) {	
+	public static List<DocumentList> displayDirectoryContents(File fileDir) {
+		DocumentList dl = new DocumentList();
+		
 		try {
 			File[] files = fileDir.listFiles();
 			for (File file : files) {
@@ -22,7 +24,6 @@ public class ListDocumentHelper {
 					displayDirectoryContents(file);
 				} else {
 					log.debug("Absolute Path:" + file.getCanonicalPath() + " Size:"+file.length()+" file Path"+file.getPath());
-					DocumentList dl = new DocumentList();
 					dl.setFileName(file.getName());
 					dl.setUrl(file.getCanonicalPath());
 					dl.setSize(file.length());
