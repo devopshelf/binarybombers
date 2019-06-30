@@ -86,9 +86,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				 <configuration>
-                <mainClass>com.org.infy.binary.application</mainClass>
-            </configuration>
+				<!--  <configuration>
+                <mainClass>com.org.infy.binary.application.starter.BinaryBomberApplication</mainClass>
+            </configuration> -->
 			</plugin>
 		</plugins>
 	</build>
