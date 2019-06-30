@@ -11,9 +11,10 @@ import com.org.infy.binary.model.DocumentList;
 
 public class ListDocumentHelper {
 	private final static Logger log = Logger.getLogger(ListDocumentHelper.class);
-	static List<DocumentList> dlList = new ArrayList<DocumentList>();
+	
 	
 	public static List<DocumentList> displayDirectoryContents(File fileDir) {
+	 List<DocumentList> dlList = new ArrayList<DocumentList>();
 		DocumentList dl = new DocumentList();
 		
 		try {
