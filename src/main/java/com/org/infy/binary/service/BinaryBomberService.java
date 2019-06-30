@@ -61,7 +61,7 @@ public class BinaryBomberService<T> {
 		return resStat;
 	}
 	
-	
+
 	 public DocContent getDocsContent(String fileName) {
 		 DocContent docContent = new DocContent();
 		 String path = System.getProperty("user.dir")+"/files";
